@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradienttripple">
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <View
+                android:id="@+id/vv1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl31"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="3"
+                android:background="#00000000">
+
+                <TextView
+                    android:id="@+id/tv31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="casual"
+                    android:text="10-9-2019"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+            <View
+                android:id="@+id/vv5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl32"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv8"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+            <View
+                android:id="@+id/vv9"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv10"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl33"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv11"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv12"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+
+            <View
+                android:id="@+id/vv13"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv14"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl34"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv15"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv16"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+
+            <View
+                android:id="@+id/vv17"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv18"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl35"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv19"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv20"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+            <View
+                android:id="@+id/vv21"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv22"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl36"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv23"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv24"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+            <View
+                android:id="@+id/vv25"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vv26"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl37"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="3"
+                    android:background="#00000000">
+
+                    <TextView
+                        android:id="@+id/tv37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="casual"
+                        android:text="10-9-2019"
+                        android:textColor="#ffffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vv27"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#e3fdfb"></View>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vv28"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#e3fdfb">
+            </View>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

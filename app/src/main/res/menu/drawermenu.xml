@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn= "navigation_view">
+
+
+    <item android:title="More Apps"
+        android:icon="@drawable/ic_unfold_more_menu"></item>
+
+    <item android:title="Feedback">
+
+        <menu>
+
+            <item
+                android:id="@+id/rate"
+                android:title="Rate This App"
+                android:icon="@drawable/ic_rate_menu"/>
+            <item
+                android:id="@+id/remove"
+                android:title="Remove Ads"
+                android:icon="@drawable/ic_remove_menu"/>
+
+        </menu>
+    </item>
+
+
+    <item android:title="Share with friends">
+
+        <menu>
+
+            <item
+                android:id="@+id/share"
+                android:title="Share"
+                android:icon="@drawable/ic_share_menu"/>
+
+        </menu>
+
+    </item>
+
+</menu>

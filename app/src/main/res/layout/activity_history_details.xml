@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HistoryDetails">
+
+    <include
+        android:id="@+id/toolbar3"
+        layout="@layout/toolbar"
+        android:minHeight="?attr/actionBarSize" />
+
+
+    <TextView
+        android:id="@+id/tv310"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/headingbackground"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        android:text="Time Usage"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size1"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/tv312"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:text="1H  14M"
+        android:textColor="#ff1111"
+        android:textSize="@dimen/text_size1"
+        android:textStyle="bold"></TextView>
+
+
+    <ListView
+        android:id="@+id/listview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

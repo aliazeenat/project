@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowAllApps"
+    android:id="@+id/showallapps"
+    android:background="@drawable/small2"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar2"
+        android:minHeight="?attr/actionBarSize"
+        layout="@layout/toolbar"/>
+
+    <ListView
+        android:id="@+id/lvforapps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
