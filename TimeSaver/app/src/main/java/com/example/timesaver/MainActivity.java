@@ -20,11 +20,7 @@ public class MainActivity extends AppCompatActivity {
             toolbar.setTitleTextColor(Color.WHITE);
             setSupportActionBar(toolbar);
 
-            //ScreenOnOffBroadcast screenOnOffBroadcast = new ScreenOnOffBroadcast();
-            //IntentFilter lockFilter = new IntentFilter();
-            //lockFilter.addAction(Intent.ACTION_SCREEN_ON);
-            //lockFilter.addAction(Intent.ACTION_SCREEN_OFF);
-            //registerReceiver(screenOnOffBroadcast, lockFilter);
+
 
             drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
             toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
@@ -47,6 +43,36 @@ public class MainActivity extends AppCompatActivity {
             viewPager.setAdapter(pagerAdapter);
             viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
             viewPager.setOffscreenPageLimit(2);
+
+            tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
+            {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    viewPager.setCurrentItem(tab.getPosition());
+                }
+
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
+
+                }
+
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+
+                }
+            });
+
+            todayFragment = (Today)pagerAdapter.getItem(0);
+            detailsFragment = (Details) pagerAdapter.getItem(1);
+            historyFragment = (History) pagerAdapter.getItem(2);
+
+            setTheme();
+            postponeEnterTransition();
+
+            SetAllAppsNamesAndIcons();
+
+
+        }
 
     }
 }
