@@ -80,26 +80,7 @@ public class UsageTime
     public void setAllUsageTimes()
     {
         final UsageStatsManager usageStatsManager = (UsageStatsManager) mcontext.getSystemService(Context.USAGE_STATS_SERVICE);// Context.USAGE_STATS_SERVICE);
-        //Calendar beginCal = Calendar.getInstance();
-        //beginCal.set(Calendar.DAY_OF_MONTH, 3);
-        //beginCal.set(Calendar.MONTH, 6);
-        //beginCal.set(Calendar.YEAR, 2019);
-
-        //Calendar endCal = Calendar.getInstance();
-        //endCal.set(Calendar.DAY_OF_MONTH, 9);
-        //endCal.set(Calendar.MONTH, 6);
-        //endCal.set(Calendar.YEAR, 2019);
-
-        //final long currentTime = System.currentTimeMillis(); // Get current time in milliseconds
-
-        //final Calendar cal = Calendar.getInstance();
-
-        //cal.add(Calendar.DAY_OF_MONTH, -1);
-
-        //final long beginTime = cal.getTimeInMillis(); // Get begin time in milliseconds
-
-        //Log.d("tatataa",start.getTime().toString());
-        //Log.d("tatataa",end.getTime().toString());
+       
 
         final long startTime = start.getTimeInMillis();
         final long endTime = end.getTimeInMillis();
