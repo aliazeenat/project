@@ -129,5 +129,20 @@ public class UsageTime
 
     }
 
- 
+    public void removeDuplicates()
+    {
+        ArrayList<AppInfoList> newArr = new ArrayList<>();
+        for (int i=0; i<appInfoList.size();i++)
+        {
+            for (int j = 0 ; j<appInfoList.size();j++)
+            {
+                if ((i!=j) &&(appInfoList.get(i).getAppName().equals(appInfoList.get(j).getAppName())))
+                {
+                    appInfoList.remove(j);
+                }
+            }
+        }
+    }
+
+
 }
