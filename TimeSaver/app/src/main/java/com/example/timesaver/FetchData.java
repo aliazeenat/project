@@ -25,6 +25,18 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
             url = new URL("https://api.myjson.com/bins/19we9x");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
+            InputStream inputStream = httpURLConnection.getInputStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+            line = "";
+            line = bufferedReader.readLine();
+
+            JSONArray ja = new JSONArray(line);
+            JSONObject jo = (JSONObject) ja.get(0);
+
+            data = (String) jo.get("description");
+
+
         }catch (Exception e){}
 
         return null;
