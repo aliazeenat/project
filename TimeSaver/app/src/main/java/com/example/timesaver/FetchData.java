@@ -19,6 +19,20 @@ public class FetchData extends AsyncTask<Void,Void,Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-      
+        URL url;
+        try{
+
+            url = new URL("https://api.myjson.com/bins/19we9x");
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+
+        }catch (Exception e){}
+
+        return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        Help.tv.setText(data);
     }
 }
