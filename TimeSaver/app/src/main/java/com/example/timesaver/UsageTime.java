@@ -177,5 +177,13 @@ public class UsageTime
         return appInfoList.get(appInfoList.size()-1);
     }
 
- 
+    public int getTotalTime()
+    {
+        int sum = 0;
+        for (int i = 0 ; i< appInfoList.size();i++)
+        {
+            sum = sum + appInfoList.get(i).getAppTime();
+        }
+        return sum;
+    }
 }
