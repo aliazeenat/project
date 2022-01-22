@@ -22,6 +22,7 @@ public class AppInfoExtractor {
         context1 = context2;
     }
 
+
     public List<String> GetAllInstalledApkInfo(){
 
         List<String> ApkPackageName = new ArrayList<>();
@@ -49,13 +50,14 @@ public class AppInfoExtractor {
 
     }
 
+    
     public boolean isSystemPackage(ResolveInfo resolveInfo){
         return false;
         //return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
     }
 
 
-    
+
 
     public Drawable getAppIconByPackageName(String ApkTempPackageName){
 
