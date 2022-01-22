@@ -172,4 +172,10 @@ public class UsageTime
         }
     }
 
+    public AppInfoList mostUsedApp()
+    {
+        return appInfoList.get(appInfoList.size()-1);
+    }
+
+ 
 }
