@@ -63,5 +63,37 @@ public class Help extends AppCompatActivity {
             darkTheme();
     }
 
-   
+    public void lightTheme()
+    {
+
+        LinearLayout linearLayout1 = (LinearLayout) findViewById(R.id.ll123);
+
+        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.small2));
+
+
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#085e72"));
+
+    }
+
+    public void darkTheme()
+    {
+
+        LinearLayout linearLayout1 = (LinearLayout) findViewById(R.id.ll123);
+
+        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.bluebg));
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00007f")));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#00004c"));
+
+
+    }
 }
