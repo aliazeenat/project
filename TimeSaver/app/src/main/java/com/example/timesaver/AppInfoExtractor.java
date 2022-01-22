@@ -22,7 +22,33 @@ public class AppInfoExtractor {
         context1 = context2;
     }
 
-  
+    public List<String> GetAllInstalledApkInfo(){
+
+        List<String> ApkPackageName = new ArrayList<>();
+
+        Intent intent = new Intent(Intent.ACTION_MAIN,null);
+
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED );
+
+        List<ResolveInfo> resolveInfoList = context1.getPackageManager().queryIntentActivities(intent,0);
+
+        for(ResolveInfo resolveInfo : resolveInfoList){
+
+            ActivityInfo activityInfo = resolveInfo.activityInfo;
+
+            if(!isSystemPackage(resolveInfo)){
+
+                ApkPackageName.add(activityInfo.applicationInfo.packageName);
+
+            }
+        }
+
+        return ApkPackageName;
+
+    }
+
 
     public String GetAppName(String ApkPackageName){
 
