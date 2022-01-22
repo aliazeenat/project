@@ -58,5 +58,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         return todayReturn;
     }
 
-   
+    public Details getDetails() {
+        return detailsReturn;
+    }
+
+    public History getHistory() {
+        return historyReturn;
+    }
 }
