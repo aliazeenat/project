@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
-            
+
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
