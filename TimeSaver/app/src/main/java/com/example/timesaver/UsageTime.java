@@ -144,5 +144,32 @@ public class UsageTime
         }
     }
 
+    public void checkTimes()
+    {
+        final UsageStatsManager usageStatsManager = (UsageStatsManager) mcontext.getSystemService(Context.USAGE_STATS_SERVICE);// Context.USAGE_STATS_SERVICE);
+
+        //Log.d("tatataa",start.getTime().toString());
+        //Log.d("tatataa",end.getTime().toString());
+
+        final long startTime = start.getTimeInMillis();
+        final long endTime = end.getTimeInMillis();
+
+        final List<UsageStats> queryUsageStats=usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
+
+        //Log.e("pkpkpk",Integer.toString(queryUsageStats.size()));
+        String s1 = appInfoList.get(appInfoList.size()-3).appPackage;
+
+        for (UsageStats app : queryUsageStats) {
+            //Log.e("tatata",(app.getPackageName() + " | " + (float) (app.getTotalTimeInForeground() / (1000*60))));
+
+            String s2 = app.getPackageName();
+
+            //Log.e("pkpkpk",s2);
+
+                if (s1.equals(s2)) {
+                    //Log.e("tatata", Integer.toString((int) app.getTotalTimeInForeground() / 1000));
+                }
+        }
+    }
 
 }
