@@ -185,57 +185,7 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
         super.onResume();
     }
 
-    public void lightTheme()
-    {
-        View vieww = navigationView.getHeaderView(0);
-
-        LinearLayout linearLayout1 = (LinearLayout) vieww.findViewById(R.id.headerl1);
-
-        drawerLayout.setBackground(ContextCompat.getDrawable(this,R.drawable.small2));
-        tabLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
-        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
-
-
-        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
-
-        Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        window.setStatusBarColor(Color.parseColor("#085e72"));
-
-    }
-
-    public void darkTheme()
-    {
-        View vieww = navigationView.getHeaderView(0);
-
-        LinearLayout linearLayout1 = (LinearLayout) vieww.findViewById(R.id.headerl1);
-
-        drawerLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.bluebg));
-        tabLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
-        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
-
-        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
-
-        Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        window.setStatusBarColor(Color.parseColor("#00004c"));
-
-    }
-
-    public void setTheme()
-    {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Mypref",0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        int theme = sharedPreferences.getInt("Theme",0);
-        if (theme == 0)
-            lightTheme();
-        else
-            darkTheme();
-
-    }
+ 
 
     public void SetAllAppsNamesAndIcons()
     {
