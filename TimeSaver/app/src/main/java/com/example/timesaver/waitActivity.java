@@ -136,18 +136,44 @@ public class WaitActivity extends AppCompatActivity {
 
     }
 
-   
-    public void setTheme()
+    public void darkTheme()
     {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Mypref",0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+        ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.clwait);
+        constraintLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.bluebg));
 
-        int theme = sharedPreferences.getInt("Theme",0);
-        if (theme == 0)
-            lightTheme();
-        else
-            darkTheme();
+        CardView cv = (CardView) findViewById(R.id.cv12wait);
+        cv.setCardBackgroundColor(Color.parseColor("#000099"));
+
+        TextView tv = (TextView) findViewById(R.id.tv1wait);
+        tv.setTextColor(Color.parseColor("#ffffff"));
+
+        ImageView imv = (ImageView) findViewById(R.id.imgclock);
+        imv.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.avd_anim2));
+
+        l1.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l2.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l3.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l4.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l5.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l6.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l7.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l8.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l9.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l10.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l11.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l12.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l13.setBackgroundColor(Color.parseColor("#80ffffff"));
+        l14.setBackgroundColor(Color.parseColor("#80ffffff"));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#00004c"));
+
+
     }
+
+   
 
     @Override
     protected void onRestart() {
