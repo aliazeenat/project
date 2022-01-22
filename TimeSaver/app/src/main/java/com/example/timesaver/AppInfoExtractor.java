@@ -50,7 +50,7 @@ public class AppInfoExtractor {
 
     }
 
-    
+
     public boolean isSystemPackage(ResolveInfo resolveInfo){
         return false;
         //return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);

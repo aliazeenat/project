@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
 
     public static int OVERLAY_PERMISSION_REQ_CODE = 41;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
+
+
 
         //ScreenOnOffBroadcast screenOnOffBroadcast = new ScreenOnOffBroadcast();
         //IntentFilter lockFilter = new IntentFilter();
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+            
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
