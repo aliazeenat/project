@@ -49,5 +49,14 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         }
     }
 
+    @Override
+    public int getCount() {
+        return NoOfTabs;
+    }
+
+    public Today getToday() {
+        return todayReturn;
+    }
+
    
 }
