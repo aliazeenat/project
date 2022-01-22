@@ -51,4 +51,17 @@ public class Help extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void setTheme()
+    {
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Mypref",0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        int theme = sharedPreferences.getInt("Theme",0);
+        if (theme == 0)
+            lightTheme();
+        else
+            darkTheme();
+    }
+
+   
 }
