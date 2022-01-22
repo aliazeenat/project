@@ -45,5 +45,36 @@ public class UsageTime
         Collections.sort(appInfoList,compareByTime);
     }
 
+    public ArrayList<AppInfoList> getAppInfoList()
+    {
+        return appInfoList;
+    }
+
+    public void SetAllAppsNamesAndIcons()
+    {
+        Drawable appIco = null;
+        String appName = "";
+        String appPackage = "";
+        int appTime = 0;
+
+        PackageManager ppm = mcontext.getPackageManager();
+
+        List<String> apps = new ArrayList<>();
+        appInfoList = new ArrayList<>();
+
+        AppInfoExtractor apk = new AppInfoExtractor(mcontext);
+        apps = apk.GetAllInstalledApkInfo();
+
+        for (int i = 0 ; i < apps.size(); i ++)
+        {
+
+            appPackage = apps.get(i);
+            appName = apk.GetAppName(apps.get(i));
+            appIco = apk.getAppIconByPackageName(apps.get(i));
+
+            appInfoList.add(new AppInfoList(appIco,appName,appPackage,appTime));
+        }
+
+    }
 
 }
