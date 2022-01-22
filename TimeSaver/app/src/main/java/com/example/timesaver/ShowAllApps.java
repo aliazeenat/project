@@ -98,5 +98,23 @@ public class ShowAllApps extends AppCompatActivity {
             darkTheme();
     }
 
+    public void lightTheme()
+    {
+
+        LinearLayout linearLayout1 = (LinearLayout) findViewById(R.id.showallapps);
+
+        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.small2));
+
+
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#085e72"));
+
+    }
+
+    
 
 }
