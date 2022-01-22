@@ -71,27 +71,5 @@ public class AppInfoExtractor {
         return drawable;
     }
 
-    public String GetAppName(String ApkPackageName){
-
-        String Name = "";
-
-        ApplicationInfo applicationInfo;
-
-        PackageManager packageManager = context1.getPackageManager();
-
-        try {
-
-            applicationInfo = packageManager.getApplicationInfo(ApkPackageName, 0);
-
-            if(applicationInfo!=null){
-
-                Name = (String)packageManager.getApplicationLabel(applicationInfo);
-            }
-
-        }catch (PackageManager.NameNotFoundException e) {
-
-            e.printStackTrace();
-        }
-        return Name;
-    }
+  
 }
