@@ -54,6 +54,9 @@ public class AppInfoExtractor {
         //return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
     }
 
+
+    
+
     public Drawable getAppIconByPackageName(String ApkTempPackageName){
 
         Drawable drawable;
@@ -70,6 +73,11 @@ public class AppInfoExtractor {
         }
         return drawable;
     }
+
+
+
+
+
 
     public String GetAppName(String ApkPackageName){
 
