@@ -185,7 +185,27 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
         super.onResume();
     }
 
- 
+    public void lightTheme()
+    {
+        View vieww = navigationView.getHeaderView(0);
+
+        LinearLayout linearLayout1 = (LinearLayout) vieww.findViewById(R.id.headerl1);
+
+        drawerLayout.setBackground(ContextCompat.getDrawable(this,R.drawable.small2));
+        tabLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
+        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
+
+
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientgraytablayout));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#085e72"));
+
+    }
+
+   
 
     public void SetAllAppsNamesAndIcons()
     {
