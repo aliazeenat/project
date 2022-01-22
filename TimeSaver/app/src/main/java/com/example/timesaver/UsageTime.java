@@ -87,21 +87,19 @@ public class UsageTime
 
         final List<UsageStats> queryUsageStats=usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
-        //final List<UsageStats> queryUsageStats = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, beginCal.getTimeInMillis(), endCal.getTimeInMillis());
-
-        //Log.e("pkpkpk",Integer.toString(queryUsageStats.size()));
+       
 
         for (UsageStats app : queryUsageStats) {
-            //System.out.println(app.getPackageName() + " | " + (float) (app.getTotalTimeInForeground() / 1000));
+            
 
             String s2 = app.getPackageName();
-            //Log.e("pkpkpk",s2);
+            
 
             for (int i = 0; i<appInfoList.size(); i++) {
                 String s1 = appInfoList.get(i).appPackage;
 
                 if (s1.equals(s2)) {
-                    //Log.e("tatata", Integer.toString((int) app.getTotalTimeInForeground() / 1000));
+                   
                     appInfoList.get(i).setAppTime((int) ((app.getTotalTimeInForeground() / (1000*60))));
                 }
 
