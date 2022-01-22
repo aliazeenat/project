@@ -22,54 +22,29 @@ public class AppInfoExtractor {
         context1 = context2;
     }
 
-    public List<String> GetAllInstalledApkInfo(){
+  
 
-        List<String> ApkPackageName = new ArrayList<>();
+    public String GetAppName(String ApkPackageName){
 
-        Intent intent = new Intent(Intent.ACTION_MAIN,null);
+        String Name = "";
 
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        ApplicationInfo applicationInfo;
 
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED );
+        PackageManager packageManager = context1.getPackageManager();
 
-        List<ResolveInfo> resolveInfoList = context1.getPackageManager().queryIntentActivities(intent,0);
+        try {
 
-        for(ResolveInfo resolveInfo : resolveInfoList){
+            applicationInfo = packageManager.getApplicationInfo(ApkPackageName, 0);
 
-            ActivityInfo activityInfo = resolveInfo.activityInfo;
+            if(applicationInfo!=null){
 
-            if(!isSystemPackage(resolveInfo)){
-
-                ApkPackageName.add(activityInfo.applicationInfo.packageName);
-
+                Name = (String)packageManager.getApplicationLabel(applicationInfo);
             }
-        }
 
-        return ApkPackageName;
-
-    }
-
-    public boolean isSystemPackage(ResolveInfo resolveInfo){
-        return false;
-        //return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
-    }
-
-    public Drawable getAppIconByPackageName(String ApkTempPackageName){
-
-        Drawable drawable;
-
-        try{
-            drawable = context1.getPackageManager().getApplicationIcon(ApkTempPackageName);
-
-        }
-        catch (PackageManager.NameNotFoundException e){
+        }catch (PackageManager.NameNotFoundException e) {
 
             e.printStackTrace();
-
-            drawable = ContextCompat.getDrawable(context1, R.mipmap.ic_launcher);
         }
-        return drawable;
+        return Name;
     }
-
-  
 }
