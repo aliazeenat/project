@@ -205,6 +205,25 @@ public class MainActivity extends AppCompatActivity implements Today.OnFragmentI
 
     }
 
+    public void darkTheme()
+    {
+        View vieww = navigationView.getHeaderView(0);
+
+        LinearLayout linearLayout1 = (LinearLayout) vieww.findViewById(R.id.headerl1);
+
+        drawerLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.bluebg));
+        tabLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
+        linearLayout1.setBackground(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
+
+        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(this, R.drawable.gradientdarkbluetablauout));
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        window.setStatusBarColor(Color.parseColor("#00004c"));
+
+    }
+
    
 
     public void SetAllAppsNamesAndIcons()
