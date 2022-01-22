@@ -54,7 +54,22 @@ public class AppInfoExtractor {
         //return ((resolveInfo.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
     }
 
-   
+    public Drawable getAppIconByPackageName(String ApkTempPackageName){
+
+        Drawable drawable;
+
+        try{
+            drawable = context1.getPackageManager().getApplicationIcon(ApkTempPackageName);
+
+        }
+        catch (PackageManager.NameNotFoundException e){
+
+            e.printStackTrace();
+
+            drawable = ContextCompat.getDrawable(context1, R.mipmap.ic_launcher);
+        }
+        return drawable;
+    }
 
     public String GetAppName(String ApkPackageName){
 
