@@ -80,23 +80,52 @@ public class UsageTime
     public void setAllUsageTimes()
     {
         final UsageStatsManager usageStatsManager = (UsageStatsManager) mcontext.getSystemService(Context.USAGE_STATS_SERVICE);// Context.USAGE_STATS_SERVICE);
-        //Calendar beginCal = Calendar.getInstance();
-        //beginCal.set(Calendar.DAY_OF_MONTH, 3);
-        //beginCal.set(Calendar.MONTH, 6);
-        //beginCal.set(Calendar.YEAR, 2019);
+       
 
-        //Calendar endCal = Calendar.getInstance();
-        //endCal.set(Calendar.DAY_OF_MONTH, 9);
-        //endCal.set(Calendar.MONTH, 6);
-        //endCal.set(Calendar.YEAR, 2019);
+        final long startTime = start.getTimeInMillis();
+        final long endTime = end.getTimeInMillis();
 
-        //final long currentTime = System.currentTimeMillis(); // Get current time in milliseconds
+        final List<UsageStats> queryUsageStats=usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
-        //final Calendar cal = Calendar.getInstance();
+       
 
-        //cal.add(Calendar.DAY_OF_MONTH, -1);
+        for (UsageStats app : queryUsageStats) {
+            
 
-        //final long beginTime = cal.getTimeInMillis(); // Get begin time in milliseconds
+            String s2 = app.getPackageName();
+            
+
+            for (int i = 0; i<appInfoList.size(); i++) {
+                String s1 = appInfoList.get(i).appPackage;
+
+                if (s1.equals(s2)) {
+                   
+                    appInfoList.get(i).setAppTime((int) ((app.getTotalTimeInForeground() / (1000*60))));
+                }
+
+            }
+        }
+
+    }
+
+    public void removeDuplicates()
+    {
+        ArrayList<AppInfoList> newArr = new ArrayList<>();
+        for (int i=0; i<appInfoList.size();i++)
+        {
+            for (int j = 0 ; j<appInfoList.size();j++)
+            {
+                if ((i!=j) &&(appInfoList.get(i).getAppName().equals(appInfoList.get(j).getAppName())))
+                {
+                    appInfoList.remove(j);
+                }
+            }
+        }
+    }
+
+    public void checkTimes()
+    {
+        final UsageStatsManager usageStatsManager = (UsageStatsManager) mcontext.getSystemService(Context.USAGE_STATS_SERVICE);// Context.USAGE_STATS_SERVICE);
 
         //Log.d("tatataa",start.getTime().toString());
         //Log.d("tatataa",end.getTime().toString());
@@ -106,28 +135,34 @@ public class UsageTime
 
         final List<UsageStats> queryUsageStats=usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
-        //final List<UsageStats> queryUsageStats = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, beginCal.getTimeInMillis(), endCal.getTimeInMillis());
-
         //Log.e("pkpkpk",Integer.toString(queryUsageStats.size()));
+        String s1 = appInfoList.get(appInfoList.size()-3).appPackage;
 
         for (UsageStats app : queryUsageStats) {
-            //System.out.println(app.getPackageName() + " | " + (float) (app.getTotalTimeInForeground() / 1000));
+            //Log.e("tatata",(app.getPackageName() + " | " + (float) (app.getTotalTimeInForeground() / (1000*60))));
 
             String s2 = app.getPackageName();
-            //Log.e("pkpkpk",s2);
 
-            for (int i = 0; i<appInfoList.size(); i++) {
-                String s1 = appInfoList.get(i).appPackage;
+            //Log.e("pkpkpk",s2);
 
                 if (s1.equals(s2)) {
                     //Log.e("tatata", Integer.toString((int) app.getTotalTimeInForeground() / 1000));
-                    appInfoList.get(i).setAppTime((int) ((app.getTotalTimeInForeground() / (1000*60))));
                 }
-
-            }
         }
-
     }
 
- 
+    public AppInfoList mostUsedApp()
+    {
+        return appInfoList.get(appInfoList.size()-1);
+    }
+
+    public int getTotalTime()
+    {
+        int sum = 0;
+        for (int i = 0 ; i< appInfoList.size();i++)
+        {
+            sum = sum + appInfoList.get(i).getAppTime();
+        }
+        return sum;
+    }
 }
