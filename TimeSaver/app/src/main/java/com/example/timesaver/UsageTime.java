@@ -80,26 +80,47 @@ public class UsageTime
     public void setAllUsageTimes()
     {
         final UsageStatsManager usageStatsManager = (UsageStatsManager) mcontext.getSystemService(Context.USAGE_STATS_SERVICE);// Context.USAGE_STATS_SERVICE);
-       
+        //Calendar beginCal = Calendar.getInstance();
+        //beginCal.set(Calendar.DAY_OF_MONTH, 3);
+        //beginCal.set(Calendar.MONTH, 6);
+        //beginCal.set(Calendar.YEAR, 2019);
+
+        //Calendar endCal = Calendar.getInstance();
+        //endCal.set(Calendar.DAY_OF_MONTH, 9);
+        //endCal.set(Calendar.MONTH, 6);
+        //endCal.set(Calendar.YEAR, 2019);
+
+        //final long currentTime = System.currentTimeMillis(); // Get current time in milliseconds
+
+        //final Calendar cal = Calendar.getInstance();
+
+        //cal.add(Calendar.DAY_OF_MONTH, -1);
+
+        //final long beginTime = cal.getTimeInMillis(); // Get begin time in milliseconds
+
+        //Log.d("tatataa",start.getTime().toString());
+        //Log.d("tatataa",end.getTime().toString());
 
         final long startTime = start.getTimeInMillis();
         final long endTime = end.getTimeInMillis();
 
         final List<UsageStats> queryUsageStats=usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
-       
+        //final List<UsageStats> queryUsageStats = usageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, beginCal.getTimeInMillis(), endCal.getTimeInMillis());
+
+        //Log.e("pkpkpk",Integer.toString(queryUsageStats.size()));
 
         for (UsageStats app : queryUsageStats) {
-            
+            //System.out.println(app.getPackageName() + " | " + (float) (app.getTotalTimeInForeground() / 1000));
 
             String s2 = app.getPackageName();
-            
+            //Log.e("pkpkpk",s2);
 
             for (int i = 0; i<appInfoList.size(); i++) {
                 String s1 = appInfoList.get(i).appPackage;
 
                 if (s1.equals(s2)) {
-                   
+                    //Log.e("tatata", Integer.toString((int) app.getTotalTimeInForeground() / 1000));
                     appInfoList.get(i).setAppTime((int) ((app.getTotalTimeInForeground() / (1000*60))));
                 }
 

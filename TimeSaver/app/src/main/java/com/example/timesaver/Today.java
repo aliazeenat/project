@@ -333,7 +333,7 @@ public class Today extends Fragment {
 
         tv1.setTextColor(Color.BLACK);
         timev12.setTextColor(Color.BLACK);
-        //    tv3.setTextColor(Color.BLACK);
+    //    tv3.setTextColor(Color.BLACK);
         tv4.setTextColor(Color.BLACK);
         tv5.setTextColor(Color.parseColor("#ff1111"));
 
@@ -370,7 +370,7 @@ public class Today extends Fragment {
 
         tv1.setTextColor(Color.WHITE);
         timev12.setTextColor(Color.WHITE);
-        //  tv3.setTextColor(Color.WHITE);
+    //  tv3.setTextColor(Color.WHITE);
         tv4.setTextColor(Color.WHITE);
         tv5.setTextColor(Color.parseColor("#ff1111"));
 

@@ -41,9 +41,6 @@ public class History extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
-<<<<<<< HEAD
- 
-=======
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7;
     ConstraintLayout cl1,cl2,cl3,cl4,cl5,cl6,cl7;
     View vv1,vv2,vv3,vv4,vv5,vv6,vv7,vv8,vv9,vv10,vv11,vv12,vv13,vv14,vv15,vv16,vv17,vv18,vv19,vv20,vv21,vv22,vv23,vv24,vv25,vv26,vv27,vv28;
@@ -356,7 +353,6 @@ public class History extends Fragment {
 
 
     }
->>>>>>> 0868a6c84d85d08a74f9b529035455c039ab894f
 
 
 }

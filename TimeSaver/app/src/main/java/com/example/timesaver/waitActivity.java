@@ -184,7 +184,6 @@ public class WaitActivity extends AppCompatActivity {
         else
             darkTheme();
     }
-    
 
     @Override
     protected void onRestart() {
