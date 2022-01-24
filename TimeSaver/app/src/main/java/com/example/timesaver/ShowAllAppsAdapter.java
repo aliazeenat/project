@@ -60,17 +60,23 @@ public class ShowAllAppsAdapter extends ArrayAdapter {
 
         appsView.textView2.setText(strTime);
 
+        
         if (highest == false)
         {
             highestTime = appInfoList.getAppTime();
             highest = true;
         }
 
+
+
         int num = ((appInfoList.appTime*100)/highestTime);
         appsView.progressBar.setProgress(num);
 
         return row;
     }
+
+
+
 
     static class AppsView
     {
