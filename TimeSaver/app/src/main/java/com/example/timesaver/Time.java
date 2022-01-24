@@ -38,5 +38,28 @@ public class Time {
         this.sec = sec;
     }
 
+    public Time nextSec(Time time)
+    {
+        time.setSec(time.getSec()+1);
+        if (time.getSec()==60)
+        {
+            time.setSec(0);
+            time.setMin(time.getMin()+1);
+        }
+        if(time.getMin()==60)
+        {
+            time.setMin(0);
+            time.setHours(time.getHours()+1);
+        }
+        return time;
+    }
 
+    public String toString(Time time)
+    {
+        String s = "";
+
+        s = time.getHours()+"H "+time.getMin()+"M";
+
+        return s;
+    }
 }
