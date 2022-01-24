@@ -113,6 +113,21 @@ public class WaitActivity extends AppCompatActivity {
 
         ImageView imv = (ImageView) findViewById(R.id.imgclock);
         imv.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.avd_anim));
+        
+        l1.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l2.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l3.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l4.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l5.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l6.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l7.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l8.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l9.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l10.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l11.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l12.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l13.setBackgroundColor(Color.parseColor("#800dbab1"));
+        l14.setBackgroundColor(Color.parseColor("#800dbab1"));
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
